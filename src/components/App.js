@@ -4,38 +4,39 @@ import VideoPlayerContainer from '../containers/VideoPlayerContainer.js';
 import SearchContainer from '../containers/SearchContainer.js';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
+  // constructor(props) {
+  //   super(props);
 
-    this.state = {
-      videos: [],
-      currentVideo: null
-    };
+  //   this.state = {
+  //     videos: [],
+  //     currentVideo: null
+  //   };
 
-    this.getYouTubeVideos = this.getYouTubeVideos.bind(this);
-  }
+  //   this.getYouTubeVideos = this.getYouTubeVideos.bind(this);
+  // }
 
   componentDidMount() {
-    this.getYouTubeVideos('react tutorials');
+    // this.getYouTubeVideos('react tutorials');
   }
 
   // deleted handleClickTitle method (check container)
 
-  getYouTubeVideos(query) {
-    var options = {
-      key: this.props.API_KEY,
-      query: query
-    };
+  // getYouTubeVideos(query) {
+  //   var options = {
+  //     key: this.props.API_KEY,
+  //     query: query
+  //   };
 
-    this.props.searchYouTube(options, (videos) =>
-      this.setState({
-        videos: videos,
-        currentVideo: videos[0]
-      })
-    );
-  }
+  //   this.props.searchYouTube(options, (videos) =>
+  //     this.setState({
+  //       videos: videos,
+  //       currentVideo: videos[0]
+  //     })
+  //   );
+  // }
 
   render() {
+    console.log(this.props);
     return (
       <div>
         <nav className="navbar">

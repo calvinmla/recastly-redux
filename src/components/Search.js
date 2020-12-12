@@ -1,6 +1,5 @@
 import React from 'react';
 
- 
 class Search extends React.Component {
   constructor(props) {
     super(props);
@@ -11,13 +10,14 @@ class Search extends React.Component {
   }
 
   handleInputChange(e) {
-    this.props.getYouTubeVideos(e.target.value);
+    this.props.handleSearchInputChange(e.target.value);
     this.setState({
       value: e.target.value
     });
   }
 
   render() {
+    console.log(this.props);
     return (
       <div className="search-bar form-inline">
         <input
